@@ -7,6 +7,8 @@ import {
 import "../../style.css";
 //@ts-ignore
 import close from "./close.svg";
+//@ts-ignore
+import courier from "./courier.svg";
 
 function Inbox({
   messages, title, onClose, onMessageClick,
@@ -21,7 +23,7 @@ function Inbox({
       <Body>
         {messages.map((message, index) => <Message onClick={() => onMessageClick(message)} key={index} {...message}/>)}
       </Body>
-      <Footer><img src='https://app.courier.com/static/favicon/favicon-32x32.png' /></Footer>
+      <Footer><img src={courier}/></Footer>
     </Container>
   );
 }

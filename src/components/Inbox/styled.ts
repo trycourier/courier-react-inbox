@@ -5,6 +5,7 @@ export const Container = styled.div`
   box-shadow: rgba(157, 55, 137, 0.2) 0px 4px 12px;
   max-width: 400px;
   border-radius: 20px;
+  overflow: hidden;
 `;
 
 export const Title = styled.div`
@@ -16,24 +17,29 @@ export const Title = styled.div`
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
   > div {
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 .25px rgba(0, 0, 0, .4);
     :last-child {
-      margin-bottom: 0px;
+      box-shadow: none;
     }
   }
 `;
 
 export const Footer = styled.div`
-  border-top: 1px solid rgb(213, 213, 213);
-  display: flex;
+background-color: rgb(251, 251, 251);
+  border-top: 1px solid rgb(234, 238, 240);
   justify-content: center;
-  height: 42px;
+  display: flex;
+  height: 38px;
   align-items: center;
   img {
-    opacity: 50%;
     filter: grayscale(100%);
+    height: 20px;
+    width: 20px;
   }
 `;
 
