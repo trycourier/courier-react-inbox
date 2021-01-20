@@ -18,7 +18,7 @@ export const Body = styled.div`
   flex-direction: column;
   margin: 20px 0;
   > div {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     :last-child {
       margin-bottom: 0px;
     }
