@@ -9,7 +9,7 @@ import "../../style.css";
 import close from "./close.svg";
 
 function Inbox({
-  messages, title, onClose,
+  messages, title, onClose, onMessageClick,
 }) {
   return (
     <Container>
@@ -19,7 +19,7 @@ function Inbox({
       </Header>
       <SubTitle>INBOX</SubTitle>
       <Body>
-        {messages.map((message, index) => <Message key={index} {...message}/>)}
+        {messages.map((message, index) => <Message onClick={() => onMessageClick(message)} key={index} {...message}/>)}
       </Body>
       <Footer><img src='https://app.courier.com/static/favicon/favicon-32x32.png' /></Footer>
     </Container>

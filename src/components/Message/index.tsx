@@ -4,10 +4,10 @@ import {
 } from "./styled";
 
 function Message({
-  title, body, icon,
+  title, body, icon, onClick,
 }) {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Icon src={icon}/>
       <ContentContainer>
         <Title>{title}</Title>
