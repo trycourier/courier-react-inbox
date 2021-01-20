@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div` 
+  width: min-content;
   svg {
     cursor: pointer;
     height: 20px;

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Indicator } from "../src";
 
 export default {

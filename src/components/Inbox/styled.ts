@@ -6,12 +6,16 @@ export const Container = styled.div`
   max-width: 400px;
   border-radius: 20px;
   overflow: hidden;
+  opacity: ${props => props.show ? 1 : 0};
+  visibility: ${props => props.show ? "visible" : "hidden"};
+  transition: all .1s ease-in-out;
 `;
 
 export const Title = styled.div`
   color: rgb(52, 69, 99);
   font-size: 16px;
   font-weight: bold;
+  user-select: none;
 `;
 
 export const Body = styled.div`
@@ -58,6 +62,7 @@ export const Close = styled.img`
   width: 14px;
   position: absolute;
   right: 20px;
+  user-select: none;
 `;
 
 export const SubTitle = styled.div`

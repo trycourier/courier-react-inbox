@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Message from "../Message";
 import {
   Body, Container, Footer, Title,
@@ -12,9 +12,11 @@ import courier from "./courier.svg";
 
 function Inbox({
   messages, title, onClose, onMessageClick,
+  indicator, show: _show,
 }) {
+  const show = !indicator ? true : indicator && _show ? true : false;
   return (
-    <Container>
+    <Container show={show}>
       <Header>
         <Title>{title}</Title>
         <Close onClick={onClose} src={close} />

@@ -1,8 +1,9 @@
-import React from "react";
-import { Inbox } from "../src";
+import React, { useState } from "react";
+
+import { Inbox, Indicator } from "../src";
 
 export default {
-  title: "Example/Inbox",
+  title: "Example/Combined",
   component: Inbox,
   argTypes:{ },
   args: {},
@@ -23,5 +24,17 @@ const messages = [
 ];
 
 export function Default() {
-  return <Inbox onMessageClick={(message) => alert(`You clicked on ${JSON.stringify(message)}`)} title="Notifications" messages={messages}/>;
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <Indicator onClick={() => setShow(!show)} />
+      <Inbox
+        onClose={() => setShow(!show)}
+        show={show}
+        indicator={Indicator}
+        onMessageClick={(message) => alert(`You clicked on ${JSON.stringify(message)}`)}
+        title="Notifications"
+        messages={messages}/>
+    </>
+  );
 }
