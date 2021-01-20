@@ -30,7 +30,7 @@ export const Body = styled.div`
 `;
 
 export const Footer = styled.div`
-background-color: rgb(251, 251, 251);
+  background-color: rgb(251, 251, 251);
   border-top: 1px solid rgb(234, 238, 240);
   justify-content: center;
   display: flex;
