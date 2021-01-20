@@ -71,4 +71,5 @@ export const SubTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: rgb(143, 143, 143);
+  user-select: none;
 `;
