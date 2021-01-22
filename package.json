@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6320",
     "build-storybook": "build-storybook",
     "babel": "babel src -d dist --extensions \".ts,.tsx\" --ignore \"src/**/__tests__/**\"",
     "build": "rimraf dist && yarn babel",

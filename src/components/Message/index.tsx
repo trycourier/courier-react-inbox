@@ -4,7 +4,7 @@ import {
 } from "./styled";
 
 function Message({
-  title, body, icon, onClick,
+  title, body, icon, onClick, read,
 }) {
   return (
     <Container onClick={onClick}>
