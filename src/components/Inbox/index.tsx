@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Message from "../Message";
+import { useCloseOnClickOut } from "../../hooks";
 import {
   Body, Container, Footer, Title,
   Header, Close, SubTitle,
@@ -12,11 +13,13 @@ import courier from "./courier.svg";
 
 function Inbox({
   messages, title, onClose, onMessageClick,
-  indicator, show: _show,
+  indicator, show: _show, closeOnClickOut,
 }) {
+  const rootRef = useRef();
   const show = !indicator ? true : indicator && _show ? true : false;
+  useCloseOnClickOut(rootRef.current, show && closeOnClickOut, onClose);
   return (
-    <Container show={show}>
+    <Container ref={rootRef} show={show}>
       <Header>
         <Title>{title}</Title>
         <Close onClick={onClose} src={close} />

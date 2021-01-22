@@ -5,7 +5,7 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
     "ecmaFeatures": {

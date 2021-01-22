@@ -29,6 +29,7 @@ export function Default() {
     <>
       <Indicator onClick={() => setShow(!show)} />
       <Inbox
+        closeOnClickOut={true}
         onClose={() => setShow(!show)}
         show={show}
         indicator={Indicator}
