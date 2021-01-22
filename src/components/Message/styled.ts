@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Container = styled.button`
   display: flex;
   cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: initial;
 `;
 
 export const Title = styled.div`

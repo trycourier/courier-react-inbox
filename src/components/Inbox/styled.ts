@@ -23,7 +23,7 @@ export const Body = styled.div`
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 5px;
-  > div {
+  > * {
     padding-bottom: 15px;
     margin-bottom: 15px;
     box-shadow: 0 .25px rgba(0, 0, 0, .4);
