@@ -65,7 +65,8 @@ function Inbox(_ref) {
 }
 
 function ThemeWrapper(_ref2) {
-  var theme = _ref2.theme,
+  var _ref2$theme = _ref2.theme,
+      theme = _ref2$theme === void 0 ? {} : _ref2$theme,
       props = _objectWithoutProperties(_ref2, ["theme"]);
 
   return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {
