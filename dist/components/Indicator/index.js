@@ -1,15 +1,25 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importDefault(require("react"));
-var styled_1 = require("./styled");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styled = require("./styled");
+
+var _Bell = _interopRequireDefault(require("./Bell"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 //@ts-ignore
-var Bell_1 = __importDefault(require("./Bell"));
-function Indicator(_a) {
-    var onClick = _a.onClick;
-    return (react_1.default.createElement(styled_1.Container, { onClick: onClick },
-        react_1.default.createElement(Bell_1.default, null)));
+function Indicator(_ref) {
+  var onClick = _ref.onClick;
+  return /*#__PURE__*/_react["default"].createElement(_styled.Container, {
+    onClick: onClick
+  }, /*#__PURE__*/_react["default"].createElement(_Bell["default"], null));
 }
-exports.default = Indicator;
+
+var _default = Indicator;
+exports["default"] = _default;

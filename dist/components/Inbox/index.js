@@ -1,76 +1,77 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
-var styled_components_1 = require("styled-components");
-var Message_1 = __importDefault(require("../Message"));
-var hooks_1 = require("../../hooks");
-var styled_1 = require("./styled");
+exports["default"] = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _styledComponents = require("styled-components");
+
+var _Message = _interopRequireDefault(require("../Message"));
+
+var _hooks = require("../../hooks");
+
+var _styled = require("./styled");
+
 require("../../style.css");
-//@ts-ignore
-var close_svg_1 = __importDefault(require("./close.svg"));
-//@ts-ignore
-var courier_svg_1 = __importDefault(require("./courier.svg"));
-function Inbox(_a) {
-    var messages = _a.messages, title = _a.title, onClose = _a.onClose, onMessageClick = _a.onMessageClick, indicator = _a.indicator, closeOnClickOut = _a.closeOnClickOut;
-    var rootRef = react_1.useRef();
-    var show = !indicator ? true : indicator && _show ? true : false;
-    hooks_1.useCloseOnClickOut(rootRef.current, show && closeOnClickOut, onClose);
-    return (react_1.default.createElement(styled_1.Container, { ref: rootRef, show: show },
-        react_1.default.createElement(styled_1.Header, null,
-            react_1.default.createElement(styled_1.Title, null, title),
-            react_1.default.createElement(styled_1.Close, { onClick: onClose, src: close_svg_1.default })),
-        react_1.default.createElement(styled_1.SubTitle, null, "INBOX"),
-        react_1.default.createElement(styled_1.Body, null, messages.map(function (message, index) { return react_1.default.createElement(Message_1.default, __assign({ onClick: function () { return onMessageClick(message); }, key: index }, message)); })),
-        react_1.default.createElement(styled_1.Footer, null,
-            react_1.default.createElement("img", { src: courier_svg_1.default }))));
+
+var _close = _interopRequireDefault(require("./close.svg"));
+
+var _courier = _interopRequireDefault(require("./courier.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function Inbox(_ref) {
+  var messages = _ref.messages,
+      title = _ref.title,
+      onClose = _ref.onClose,
+      onMessageClick = _ref.onMessageClick,
+      indicator = _ref.indicator,
+      _show = _ref.show,
+      closeOnClickOut = _ref.closeOnClickOut;
+  var rootRef = (0, _react.useRef)();
+  var show = !indicator ? true : indicator && _show ? true : false;
+  (0, _hooks.useCloseOnClickOut)(rootRef.current, show && closeOnClickOut, onClose);
+  return /*#__PURE__*/_react["default"].createElement(_styled.Container, {
+    ref: rootRef,
+    show: show
+  }, /*#__PURE__*/_react["default"].createElement(_styled.Header, null, /*#__PURE__*/_react["default"].createElement(_styled.Title, null, title), /*#__PURE__*/_react["default"].createElement(_styled.Close, {
+    onClick: onClose,
+    src: _close["default"]
+  })), /*#__PURE__*/_react["default"].createElement(_styled.SubTitle, null, "INBOX"), /*#__PURE__*/_react["default"].createElement(_styled.Body, null, messages.map(function (message, index) {
+    return /*#__PURE__*/_react["default"].createElement(_Message["default"], _extends({
+      onClick: function onClick() {
+        return onMessageClick(message);
+      },
+      key: index
+    }, message));
+  })), /*#__PURE__*/_react["default"].createElement(_styled.Footer, null, /*#__PURE__*/_react["default"].createElement("img", {
+    src: _courier["default"]
+  })));
 }
-function ThemeWrapper(_a) {
-    var theme = _a.theme, props = __rest(_a, ["theme"]);
-    return (react_1.default.createElement(styled_components_1.ThemeProvider, { theme: theme },
-        react_1.default.createElement(Inbox, __assign({}, props))));
+
+function ThemeWrapper(_ref2) {
+  var theme = _ref2.theme,
+      props = _objectWithoutProperties(_ref2, ["theme"]);
+
+  return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {
+    theme: theme
+  }, /*#__PURE__*/_react["default"].createElement(Inbox, props));
 }
-exports.default = ThemeWrapper;
+
+var _default = ThemeWrapper;
+exports["default"] = _default;
