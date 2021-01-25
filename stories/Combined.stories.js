@@ -20,6 +20,7 @@ const messages = [
     body: "3 months ago - Marketing",
     icon: "https://app.courier.com/static/favicon/favicon-32x32.png",
     id: 92903100,
+    read: true,
   },
 ];
 

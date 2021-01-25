@@ -6,6 +6,15 @@ export const Container = styled.button`
   outline: none;
   border: none;
   background-color: initial;
+  position: relative;
+`;
+
+export const ReadIndicator = styled.div`
+  background-color: rgba(157, 55, 137, .5);
+  height: 50px;
+  width: 2px;
+  position: absolute;
+  left: 0;
 `;
 
 export const Title = styled.div`
@@ -26,10 +35,10 @@ export const Body = styled.div`
 
 export const Icon = styled.img`
   object-fit: contain;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   flex-shrink: 0;
-  padding: 7px;
+  padding: 5px;
   background-color: rgb(249, 249, 249);
   border-radius: 50%;
   margin-left: 10px;

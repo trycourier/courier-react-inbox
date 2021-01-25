@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Container, ContentContainer, Title, Body, Icon,
+  Container, ContentContainer, Title, Body, Icon, ReadIndicator,
 } from "./styled";
 
 function Message({
@@ -8,6 +8,7 @@ function Message({
 }) {
   return (
     <Container onClick={onClick}>
+      {!read && <ReadIndicator />}
       <Icon src={icon}/>
       <ContentContainer>
         <Title>{title}</Title>
