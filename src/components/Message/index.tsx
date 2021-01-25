@@ -4,7 +4,8 @@ import {
 } from "./styled";
 
 function Message({
-  title, body, icon, onClick, read,
+  title, body, icon,
+  onClick, read,
 }) {
   return (
     <Root read={read} onClick={onClick}>

@@ -23,14 +23,22 @@ const messages = [
     read: true,
   },
 ];
-const messageTheme = {
-  read: {
-    backgroundColor: "black",
-  },
-};
 
 const theme = {
-  backgroundColor: "grey",
+  root: {
+    backgroundColor: "lightgrey",
+  },
+  title: {
+    color: "red",
+  },
+  footer: {
+    backgroundColor: "black",
+  },
+  message: {
+    title: {
+      color: "black",
+    },
+  },
 };
 
 export function Default() {
@@ -40,11 +48,10 @@ export function Default() {
       <Indicator onClick={() => setShow(!show)} />
       <Inbox
         theme={theme}
-        messageTheme={messageTheme}
         closeOnClickOut={true}
         onClose={() => setShow(!show)}
         show={show}
-        indicator={Indicator}
+        indicator={true}
         onMessageClick={(message) => alert(`You clicked on ${JSON.stringify(message)}`)}
         title="Notifications"
         messages={messages}/>

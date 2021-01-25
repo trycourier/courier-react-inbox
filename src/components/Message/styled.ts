@@ -7,7 +7,7 @@ export const Root = styled.button<{read: boolean}>(({ theme }) => ({
   border: "none",
   backgroundColor: "initial",
   position: "relative",
-  ...theme.root,
+  ...theme.message?.root,
 }));
 
 
@@ -17,7 +17,7 @@ export const ReadIndicator = styled.div(({ theme }) => ({
   width: "2px",
   position: "absolute",
   left: "0",
-  ...theme.read,
+  ...theme.message?.read,
 }));
 
 export const Title = styled.div(({ theme }) => ({
@@ -25,18 +25,18 @@ export const Title = styled.div(({ theme }) => ({
   fontSize: "16px",
   lineHeight: "15px",
   fontWeight: "bold",
-  ...theme.title,
+  ...theme.message?.title,
 }));
 
 export const Container = styled.div(({ theme }) => ({
   margin: "0 20px",
-  ...theme.container,
+  ...theme.message?.container,
 }));
 
 export const Body = styled.div(({ theme }) => ({
   marginTop: "2px",
   fontSize: "12px",
-  ...theme.body,
+  ...theme.message?.body,
 }));
 
 export const Icon = styled.img(({ theme }) => ({
@@ -48,5 +48,5 @@ export const Icon = styled.img(({ theme }) => ({
   backgroundColor: "rgb(249, 249, 249)",
   borderRadius: "50%",
   marginLeft: "10px",
-  ...theme.icon,
+  ...theme.message?.icon,
 }));

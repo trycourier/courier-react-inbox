@@ -91,6 +91,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-max-props-per-line": [2, { maximum: 3 }],
+    "object-property-newline": ["error"],
   },
   "settings": {
     "react": {
