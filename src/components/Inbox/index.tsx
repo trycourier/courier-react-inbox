@@ -16,7 +16,7 @@ import courier from "./courier.svg";
 function Inbox({
   messages, title, onClose, onMessageClick,
   indicator, show: _show, closeOnClickOut,
-}) {
+}: InboxProps) {
   const rootRef = useRef();
   const show = !indicator ? true : indicator && _show ? true : false;
   useCloseOnClickOut(rootRef.current, show && closeOnClickOut, onClose);

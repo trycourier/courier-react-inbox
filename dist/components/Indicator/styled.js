@@ -1,17 +1,13 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Container = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var Container = _styledComponents["default"].div.withConfig({
-  displayName: "styled__Container",
-  componentId: "sc-1y62m5u-0"
-})(["  width:min-content;svg{cursor:pointer;height:20px;width:20px;:hover g{fill:#9d3789;transition:all 0.05s ease-in-out;}}"]);
-
-exports.Container = Container;
+var styled_components_1 = __importDefault(require("styled-components"));
+exports.Container = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject([" \n  width: min-content;\n  svg {\n    cursor: pointer;\n    height: 20px;\n    width: 20px;\n    :hover g {\n      fill: #9d3789;\n      transition: all 0.05s ease-in-out;\n    }\n  }\n"], [" \n  width: min-content;\n  svg {\n    cursor: pointer;\n    height: 20px;\n    width: 20px;\n    :hover g {\n      fill: #9d3789;\n      transition: all 0.05s ease-in-out;\n    }\n  }\n"])));
+var templateObject_1;

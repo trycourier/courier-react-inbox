@@ -6,13 +6,13 @@ type MessageThemeOptions = "root" | "read" | "title" | "container" | "body" | "i
 
 export interface InboxProps {
   messages: Message[];
-  title: string;
-  onClose: Function;
-  onMessageClick: Function;
-  indicator: boolean;
-  show: boolean;
-  closeOnClickOut: boolean;
-  theme: ThemeObject;
+  title?: string;
+  onClose?: Function;
+  onMessageClick?: Function;
+  indicator?: boolean;
+  show?: boolean;
+  closeOnClickOut?: boolean;
+  theme?: ThemeObject;
 }
 interface Message {
   title: string;

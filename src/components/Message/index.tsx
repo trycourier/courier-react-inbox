@@ -3,10 +3,18 @@ import {
   Root, Container, Title, Body, Icon, ReadIndicator,
 } from "./styled";
 
+interface MessageProps {
+  title: string;
+  body: string;
+  icon: string;
+  onClick: Function;
+  read?: boolean;
+}
+
 function Message({
   title, body, icon,
   onClick, read,
-}) {
+}: MessageProps) {
   return (
     <Root read={read} onClick={onClick}>
       {read && <ReadIndicator />}
