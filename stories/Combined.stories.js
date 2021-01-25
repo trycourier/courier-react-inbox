@@ -23,6 +23,15 @@ const messages = [
     read: true,
   },
 ];
+const messageTheme = {
+  read: {
+    backgroundColor: "black",
+  },
+};
+
+const theme = {
+  backgroundColor: "grey",
+};
 
 export function Default() {
   const [show, setShow] = useState(false);
@@ -30,6 +39,8 @@ export function Default() {
     <>
       <Indicator onClick={() => setShow(!show)} />
       <Inbox
+        theme={theme}
+        messageTheme={messageTheme}
         closeOnClickOut={true}
         onClose={() => setShow(!show)}
         show={show}

@@ -1,20 +1,20 @@
 import React from "react";
 import {
-  Container, ContentContainer, Title, Body, Icon, ReadIndicator,
+  Root, Container, Title, Body, Icon, ReadIndicator,
 } from "./styled";
 
 function Message({
   title, body, icon, onClick, read,
 }) {
   return (
-    <Container onClick={onClick}>
-      {!read && <ReadIndicator />}
+    <Root read={read} onClick={onClick}>
+      {read && <ReadIndicator />}
       <Icon src={icon}/>
-      <ContentContainer>
+      <Container>
         <Title>{title}</Title>
         <Body>{body}</Body>
-      </ContentContainer>
-    </Container>
+      </Container>
+    </Root>
   );
 }
 

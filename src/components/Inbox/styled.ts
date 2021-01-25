@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{show: boolean}>`
   background-color: white;
   box-shadow: rgba(157, 55, 137, 0.2) 0px 4px 12px;
   max-width: 400px;

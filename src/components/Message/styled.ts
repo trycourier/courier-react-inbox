@@ -1,45 +1,52 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
-  display: flex;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: initial;
-  position: relative;
-`;
+export const Root = styled.button<{read: boolean}>(({ theme }) => ({
+  display: "flex",
+  cursor: "pointer",
+  outline: "none",
+  border: "none",
+  backgroundColor: "initial",
+  position: "relative",
+  ...theme.root,
+}));
 
-export const ReadIndicator = styled.div`
-  background-color: rgba(157, 55, 137, .5);
-  height: 50px;
-  width: 2px;
-  position: absolute;
-  left: 0;
-`;
 
-export const Title = styled.div`
-  color: rgb(52, 69, 99);
-  font-size: 16px;
-  line-height: 15px;
-  font-weight: bold;
-`;
+export const ReadIndicator = styled.div(({ theme }) => ({
+  backgroundColor: "rgba(157, 55, 137, .5)",
+  height: "50px",
+  width: "2px",
+  position: "absolute",
+  left: "0",
+  ...theme.read,
+}));
 
-export const ContentContainer = styled.div`
-    margin: 0 20px;
-`;
+export const Title = styled.div(({ theme }) => ({
+  color: "rgb(52, 69, 99)",
+  fontSize: "16px",
+  lineHeight: "15px",
+  fontWeight: "bold",
+  ...theme.title,
+}));
 
-export const Body = styled.div`
-  margin-top: 2px;
-  font-size: 12px;
-`;
+export const Container = styled.div(({ theme }) => ({
+  margin: "0 20px",
+  ...theme.container,
+}));
 
-export const Icon = styled.img`
-  object-fit: contain;
-  height: 40px;
-  width: 40px;
-  flex-shrink: 0;
-  padding: 5px;
-  background-color: rgb(249, 249, 249);
-  border-radius: 50%;
-  margin-left: 10px;
-`;
+export const Body = styled.div(({ theme }) => ({
+  marginTop: "2px",
+  fontSize: "12px",
+  ...theme.body,
+}));
+
+export const Icon = styled.img(({ theme }) => ({
+  objectFit: "contain",
+  height: "40px",
+  width: "40px",
+  flexShrink: "0",
+  padding: "5px",
+  backgroundColor: "rgb(249, 249, 249)",
+  borderRadius: "50%",
+  marginLeft: "10px",
+  ...theme.icon,
+}));
