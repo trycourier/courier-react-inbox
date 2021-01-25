@@ -23,5 +23,10 @@ const messages = [
 ];
 
 export function Default() {
-  return <Inbox onMessageClick={(message) => alert(`You clicked on ${JSON.stringify(message)}`)} title="Notifications" messages={messages}/>;
+  return <Inbox
+    onMessageClick={
+      (message) => alert(`You clicked on ${JSON.stringify(message)}`)
+    }
+    title="Notifications"
+    messages={messages}/>;
 }

@@ -36,7 +36,7 @@ function Inbox({
   );
 }
 
-function ThemeWrapper({ theme, ...props }: InboxProps) {
+function ThemeWrapper({ theme = {}, ...props }: InboxProps) {
   return (
     <ThemeProvider theme={theme}>
       <Inbox {...props} />
