@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { CSSProperties, MouseEventHandler } from "react";
+import { CSSProperties } from "react";
 
 type InboxThemeOptions = "root" | "title" | "body" | "footer" | "header" | "close" | "subTitle" | "message";
 type MessageThemeOptions = "root" | "read" | "title" | "container" | "body" | "icon";
