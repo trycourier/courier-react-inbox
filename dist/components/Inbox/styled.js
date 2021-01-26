@@ -7,6 +7,8 @@ exports.SubTitle = exports.Close = exports.Header = exports.Footer = exports.Bod
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _lodash = _interopRequireDefault(require("lodash.merge"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -55,7 +57,7 @@ var Body = _styledComponents["default"].div.withConfig({
   componentId: "sc-14oug27-2"
 })(function (_ref3) {
   var theme = _ref3.theme;
-  return _objectSpread({
+  return (0, _lodash["default"])({
     "display": "flex",
     "flexDirection": "column",
     "marginTop": "20px",

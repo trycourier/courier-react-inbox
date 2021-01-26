@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { CSSProperties } from "react";
+import { CSSProperties, MouseEventHandler } from "react";
 
 type InboxThemeOptions = "root" | "title" | "body" | "footer" | "header" | "close" | "subTitle" | "message";
 type MessageThemeOptions = "root" | "read" | "title" | "container" | "body" | "icon";
@@ -8,7 +8,7 @@ export interface InboxProps {
   messages: Message[];
   title?: string;
   onClose?: Function;
-  onMessageClick?: Function;
+  onMessageClick?: MouseEventHandler<Element>;
   indicator?: boolean;
   show?: boolean;
   closeOnClickOut?: boolean;
@@ -23,5 +23,6 @@ interface Message {
 }
 
 type ThemeObject = {
-  [key in InboxThemeOptions | MessageThemeOptions]?: CSSProperties | ThemeObject;
+  //https://github.com/mui-org/material-ui/blob/master/packages/material-ui-styles/src/withStyles/withStyles.d.ts#L21
+  [key in InboxThemeOptions | MessageThemeOptions | string ]?: CSSProperties | ThemeObject;
 }
