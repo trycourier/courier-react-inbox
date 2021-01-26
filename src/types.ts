@@ -8,7 +8,7 @@ export interface InboxProps {
   messages: Message[];
   title?: string;
   onClose?: Function;
-  onMessageClick?: MouseEventHandler<Element>;
+  onMessageClick?: (Message) => void;
   indicator?: boolean;
   show?: boolean;
   closeOnClickOut?: boolean;
@@ -17,7 +17,7 @@ export interface InboxProps {
 interface Message {
   title: string;
   body: string;
-  icon: string;
+  icon?: string;
   id?: string | number;
   read?: boolean;
 }

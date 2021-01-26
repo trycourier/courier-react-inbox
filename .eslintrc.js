@@ -29,7 +29,9 @@ module.exports = {
     "array-callback-return": "error",
     "no-await-in-loop": "error",
     "object-curly-newline": ["error", {
-      "multiline": true, "minProperties": 3, "consistent": true,
+      "multiline": true,
+      "minProperties": 3,
+      "consistent": true,
     }],
     "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
     "no-return-await": "error",
@@ -66,19 +68,27 @@ module.exports = {
     "no-trailing-spaces": "error",
     "arrow-body-style": ["error", "as-needed"],
     "space-before-function-paren": ["error", {
-      "anonymous": "always", "named": "never", "asyncArrow": "always",
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always",
     }],
     "no-return-assign": "error",
     "padding-line-between-statements": [
       "error",
       {
-        "blankLine": "always", "prev": "*", "next": ["function", "if", "for", "while", "switch", "try"],
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["function", "if", "for", "while", "switch", "try"],
       },
       {
-        "blankLine": "always", "prev": ["const", "let", "var"], "next": ["block", "block-like", "multiline-expression"],
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": ["block", "block-like", "multiline-expression"],
       },
       {
-        "blankLine": "always", "prev": ["block", "block-like", "multiline-expression"], "next": ["const", "let", "var"],
+        "blankLine": "always",
+        "prev": ["block", "block-like", "multiline-expression"],
+        "next": ["const", "let", "var"],
       },
     ],
     "padded-blocks": ["error", "never"],

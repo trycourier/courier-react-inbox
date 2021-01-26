@@ -47,6 +47,7 @@ function Inbox(_ref) {
   var show = !indicator ? true : indicator && _show ? true : false;
   (0, _hooks.useCloseOnClickOut)(rootRef.current, show && closeOnClickOut, onClose);
   return /*#__PURE__*/_react["default"].createElement(_styled.Container, {
+    "data-test-id": "inbox-container",
     ref: rootRef,
     show: show
   }, /*#__PURE__*/_react["default"].createElement(_styled.Header, null, /*#__PURE__*/_react["default"].createElement(_styled.Title, null, title), /*#__PURE__*/_react["default"].createElement(_styled.Close, {
