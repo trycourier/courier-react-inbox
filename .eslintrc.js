@@ -45,7 +45,6 @@ module.exports = {
     "import/first": "error",
     "import/default": "off",
     "import/namespace": "off",
-    "import/no-unresolved": [2, { ignore: ["courier-react-toast"] }],
     "indent": ["error", 2],
     "react/no-find-dom-node": "warn",
     "no-undef": "error",
