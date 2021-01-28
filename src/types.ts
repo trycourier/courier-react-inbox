@@ -8,7 +8,7 @@ export interface InboxProps {
   messages: Message[];
   title?: string;
   onClose?: Function;
-  onMessageClick?: Function;
+  onMessageClick?: (Message) => void;
   indicator?: boolean;
   show?: boolean;
   closeOnClickOut?: boolean;
@@ -17,11 +17,12 @@ export interface InboxProps {
 interface Message {
   title: string;
   body: string;
-  icon: string;
+  icon?: string;
   id?: string | number;
   read?: boolean;
 }
 
 type ThemeObject = {
-  [key in InboxThemeOptions | MessageThemeOptions]?: CSSProperties | ThemeObject;
+  //https://github.com/mui-org/material-ui/blob/master/packages/material-ui-styles/src/withStyles/withStyles.d.ts#L21
+  [key in InboxThemeOptions | MessageThemeOptions | string ]?: CSSProperties | ThemeObject;
 }

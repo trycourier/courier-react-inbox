@@ -24,24 +24,52 @@ const messages = [
   },
 ];
 
+export function Default() {
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <Indicator onClick={() => setShow(!show)} />
+      <Inbox
+        closeOnClickOut={true}
+        onClose={() => setShow(!show)}
+        show={show}
+        indicator={true}
+        onMessageClick={(message) => alert(`You clicked on ${JSON.stringify(message)}`)}
+        title="Notifications"
+        messages={messages}/>
+    </>
+  );
+}
+
 const theme = {
   root: {
-    backgroundColor: "lightgrey",
+    backgroundColor: "black",
   },
   title: {
-    color: "red",
+    color: "white",
   },
   footer: {
     backgroundColor: "black",
   },
+  body: {
+    "&>*": {
+      "boxShadow": "0 .25px white",
+    },
+  },
   message: {
+    root: {
+      color: "white",
+    },
     title: {
-      color: "black",
+      color: "white",
+    },
+    container: {
+      color: "white",
     },
   },
 };
 
-export function Default() {
+export function Styled() {
   const [show, setShow] = useState(false);
   return (
     <>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import merge from "lodash.merge";
 
 export const Container = styled.div<{show: boolean}>(({ theme, show }) => ({
   backgroundColor: "white",
@@ -20,7 +21,7 @@ export const Title = styled.div(({ theme }) => ({
   ...theme.title,
 }));
 
-export const Body = styled.div(({ theme }) => ({
+export const Body = styled.div(({ theme }) => merge({
   "display": "flex",
   "flexDirection": "column",
   "marginTop": "20px",
@@ -33,8 +34,7 @@ export const Body = styled.div(({ theme }) => ({
       boxShadow: "none",
     },
   },
-  ...theme.body,
-}));
+}, theme.body));
 
 export const Footer = styled.div(({ theme }) => ({
   "backgroundColor": "rgb(251, 251, 251)",

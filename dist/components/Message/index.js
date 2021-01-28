@@ -18,6 +18,7 @@ function Message(_ref) {
       onClick = _ref.onClick,
       read = _ref.read;
   return /*#__PURE__*/_react["default"].createElement(_styled.Root, {
+    "data-test-id": "inbox-message",
     read: read,
     onClick: onClick
   }, read && /*#__PURE__*/_react["default"].createElement(_styled.ReadIndicator, null), /*#__PURE__*/_react["default"].createElement(_styled.Icon, {

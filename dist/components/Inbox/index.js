@@ -47,6 +47,7 @@ function Inbox(_ref) {
   var show = !indicator ? true : indicator && _show ? true : false;
   (0, _hooks.useCloseOnClickOut)(rootRef.current, show && closeOnClickOut, onClose);
   return /*#__PURE__*/_react["default"].createElement(_styled.Container, {
+    "data-test-id": "inbox-container",
     ref: rootRef,
     show: show
   }, /*#__PURE__*/_react["default"].createElement(_styled.Header, null, /*#__PURE__*/_react["default"].createElement(_styled.Title, null, title), /*#__PURE__*/_react["default"].createElement(_styled.Close, {
@@ -65,7 +66,8 @@ function Inbox(_ref) {
 }
 
 function ThemeWrapper(_ref2) {
-  var theme = _ref2.theme,
+  var _ref2$theme = _ref2.theme,
+      theme = _ref2$theme === void 0 ? {} : _ref2$theme,
       props = _objectWithoutProperties(_ref2, ["theme"]);
 
   return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {

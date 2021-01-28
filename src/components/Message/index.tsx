@@ -6,7 +6,7 @@ import {
 interface MessageProps {
   title: string;
   body: string;
-  icon: string;
+  icon?: string;
   onClick: Function;
   read?: boolean;
 }
@@ -16,7 +16,7 @@ function Message({
   onClick, read,
 }: MessageProps) {
   return (
-    <Root read={read} onClick={onClick}>
+    <Root data-test-id="inbox-message" read={read} onClick={onClick}>
       {read && <ReadIndicator />}
       <Icon src={icon}/>
       <Container>

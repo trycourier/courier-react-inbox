@@ -21,7 +21,7 @@ function Inbox({
   const show = !indicator ? true : indicator && _show ? true : false;
   useCloseOnClickOut(rootRef.current, show && closeOnClickOut, onClose);
   return (
-    <Container ref={rootRef} show={show}>
+    <Container data-test-id="inbox-container" ref={rootRef} show={show}>
       <Header>
         <Title>{title}</Title>
         <Close onClick={onClose} src={close} />
@@ -36,7 +36,7 @@ function Inbox({
   );
 }
 
-function ThemeWrapper({ theme, ...props }: InboxProps) {
+function ThemeWrapper({ theme = {}, ...props }: InboxProps) {
   return (
     <ThemeProvider theme={theme}>
       <Inbox {...props} />
